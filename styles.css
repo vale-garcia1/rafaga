@@ -1,0 +1,661 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5d6f8;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #6b0f85;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-items a {
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.search-icon i {
+    color: white;
+    font-size: 24px;
+}
+
+/* Encabezado de página interna */
+.page-header {
+    background-color: #6b0f85;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.page-header .logo {
+    margin-bottom: 0;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+/* Sección Hero */
+.hero {
+    background-color: #6b0f85;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    background-image: url('recursos/fiesta.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(60, 0, 80, 0.5); /* Overlay para oscurecer */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.crown {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.location, .dates {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #6b0f85;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #6b0f85;
+}
+
+/* Sección Descripción */
+.descripcion {
+    padding: 60px 20px;
+}
+
+.descripcion-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    align-items: center;
+}
+
+.descripcion-img {
+    flex: 1;
+}
+
+.descripcion-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.descripcion-text {
+    flex: 1;
+}
+
+.descripcion-text h2 {
+    color: #6b0f85;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.descripcion-text p {
+    line-height: 1.6;
+}
+
+/* Sección Artistas */
+.artistas {
+    background: none;
+    color: #000;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.artistas h2 {
+    background: #6b0f85;
+    color: #fff;
+    padding: 12px 0;
+    margin-bottom: 28px;
+    font-size: 2.5rem;
+    border-radius: 0;
+    letter-spacing: 0.5px;
+}
+
+.artistas-description {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.artistas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.artista {
+    position: relative;
+}
+
+.artista img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-secondary {
+    display: inline-block;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #6b0f85;
+}
+
+/* Sección Entradas */
+.entradas {
+    background: none;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.entradas h2 {
+    background: #6b0f85;
+    color: #fff;
+    padding: 12px 0;
+    margin-bottom: 28px;
+    font-size: 2.5rem;
+    border-radius: 0;
+    letter-spacing: 0.5px;
+}
+
+.entradas-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-details, .countdown {
+    flex: 1;
+}
+
+.event-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #6b0f85;
+}
+
+.btn-location {
+    display: inline-block;
+    background-color: #6b0f85;
+    color: white;
+    padding: 8px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.countdown p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.btn-tickets {
+    display: inline-block;
+    background-color: #6b0f85;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.play-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.img-play {
+    width: 130px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Sección Planea tu viaje */
+.planea {
+    background: none;
+    color: #000;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.planea h2 {
+    background: #6b0f85;
+    color: #fff;
+    padding: 12px 0;
+    margin-bottom: 28px;
+    font-size: 2.5rem;
+    border-radius: 0;
+    letter-spacing: 0.5px;
+    
+}
+
+.servicios {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.servicio i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Sección Ubicación */
+.ubicacion {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.ubicacion h2 {
+    color: #6b0f85;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ubicacion p {
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ubicacion-img {
+    margin-bottom: 40px;
+}
+
+.ubicacion-img img {
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.ubicacion h3 {
+    color: #6b0f85;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.mapa {
+    margin-top: 30px;
+}
+
+.mapa img {
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Mapa de Google */
+.mapa-google {
+    margin: 40px auto;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.mapa-google iframe {
+    width: 100%;
+    max-width: 800px;
+}
+
+.como-llegar {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #e8b6ed;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #6b0f85;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.logo-footer {
+    margin-bottom: 30px;
+}
+
+.logo-footer .crown {
+    width: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.redes-sociales h3, .socios h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-links a {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px;
+    }
+    .nav-items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .search-icon {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .descripcion-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .artistas-grid {
+        grid-template-columns: 1fr;
+    }
+    .artistas-circulos {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .entradas-info {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .servicios-una-imagen .iconos-servicios-img,
+    .servicios-textos {
+        width: 100vw;
+        max-width: 95vw;
+    }
+    .servicios-textos {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .servicios-textos span {
+        font-size: 1.1rem;
+    }
+    .circulo-artista {
+        width: 140px;
+        height: 140px;
+    }
+    .img-play {
+        width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 4px;
+    }
+    .nav-items {
+        display: none;
+    }
+    .search-icon {
+        align-self: flex-end;
+        margin-top: 0;
+    }
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+    .descripcion-text h2,
+    .artistas h2,
+    .entradas h2,
+    .planea h2 {
+        font-size: 1.3rem;
+        padding: 8px 0;
+    }
+    .artistas-circulos {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .circulo-artista {
+        width: 100px;
+        height: 100px;
+    }
+    .img-circulo {
+        width: 100%;
+        height: 100%;
+    }
+    .img-play {
+        width: 60px;
+    }
+    .servicios-una-imagen .iconos-servicios-img,
+    .servicios-textos {
+        width: 100vw;
+        max-width: 98vw;
+    }
+    .servicios-textos span {
+        font-size: 1rem;
+    }
+}
+
+.recursos {
+    text-align: center;
+    padding: 40px 0;
+    background: #f3e6fa;
+}
+.recurso-img img {
+    max-width: 80%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+.recurso-img a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: #7c2ae8;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.recurso-img a:hover {
+    background: #4b1a8a;
+}
+
+.icono-servicio {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.artistas-circulos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+.circulo-artista {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    position: relative;
+}
+.img-circulo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.texto-circulo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(123, 42, 232, 0.8);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.footer-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.servicios-una-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 0 0;
+}
+.iconos-servicios-img {
+    width: 360px;
+    max-width: 90vw;
+    display: block;
+}
+.servicios-textos {
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+    max-width: 90vw;
+    margin-top: 10px;
+}
+.servicios-textos span {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 8px #6b0f85;
+    font-size: 1.2rem;
+}
+
+.footer-img-only {
+    padding: 0;
+    background: none;
+}
+.footer-img-full {
+    width: 100vw;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.artistas-description, .entradas-info, .servicios-una-imagen {
+    margin-top: 0;
+} 
